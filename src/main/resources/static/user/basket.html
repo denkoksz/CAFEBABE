@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/babe/cafebabe.css">
+
+    <title>CAFEshop</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="header" class="page-header">
+                    <h1>
+                        WebShop!
+                        <small>by CAFE BABE</small>
+                    </h1>
+                </div>
+                <nav id="navbar" class="navbar navbar-nav navbar-expand-lg" data-spy="affix" data-offset-top="197">
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">CAFE</a>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
+                                    data-toggle="dropdown">Categories</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">cat1</a>
+                                    <a class="dropdown-item" href="#">cat2</a>
+                                    <a class="dropdown-item" href="#">cat3</a>
+                                    <div class="dropdown-divider">
+                                    </div>
+                                    <a class="dropdown-item" href="/">Show all</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <form class="form-inline" id="searchform">
+                            <input class="form-control mr-sm-2" type="text" id="searchbox" />
+                            <button class="btn btn-primary my-2 my-sm-0" type="submit">
+                                Search
+                            </button>
+                        </form>
+                        <a href="/admin/dashboard.html" id="admin-button">
+                            <button type="button" class="btn btn-dark" href="/admin/dashboard.html">Admin</button>
+                        </a>
+                        <ul class="navbar-nav ml-md-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="register.html" id="register-button">Register
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/login" id="login-button">Login
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="logout" id="log-out">Log Out
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="modal fade" id="deleteModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content bg-warning text-white" id="deleteModalBackground">
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="delete-form-title">Alert</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="delete-form-message">Are you sure you want to delete?</h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" id="deletebutton">Yes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closedelete">Close
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row vertical-center-row">
+                    <div class="col-md-2">
+                        <nav class="navbar bg-dark navbar-dark" id="user-nav">
+                            <!-- Brand -->
+                            <a class="navbar-brand" href="#" id="user-name">:USERNAME:</a>
+
+                            <!-- Toggler/collapsibe Button -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <!-- Navbar links -->
+                            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" href="#">My basket</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/user/myorders.html">My orders</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-md-8">
+                        <h1 class="display-3">My basket</h1>
+                        <hr>
+                        <table class="table table-hover table-dim">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Product key
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Manufacturer
+                                    </th>
+                                    <th>Price
+
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="products-table">
+
+                            </tbody>
+                            <tfoot>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" id="order-button">Order
+                            </button>
+                            </tfoot>
+                        </table>
+                        <button type="button" class="btn btn-warning btn btn-block" id="clear-basket-button">Clear
+                            basket</button>
+                        <div>
+                            <h1 class="display-4">Total price:</h1>
+                            <p class="h2" id="total-price"></p>
+
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/babe/design.js"></script>
+    <script src="../js/searchbar.js"></script>
+    <script src="../js/checkuser.js"></script>
+    <script src="../js/user/basket.js"></script>
+</body>
+
+</html>

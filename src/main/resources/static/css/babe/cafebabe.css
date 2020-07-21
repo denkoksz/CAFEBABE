@@ -1,0 +1,129 @@
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black !important;
+}
+
+#admin-button {
+    visibility: hidden;
+}
+
+#user-nav {
+    visibility: hidden;
+    max-width: 260px;
+}
+
+#collapsible {
+    width: 40% !important;
+}
+
+#admin-nav {
+    max-width: 260px;
+}
+
+.table-small {
+    width: 100% !important;
+    background-color: snow !important;
+}
+
+.table-small th {
+    background-color: rgb(75, 81, 93, 0.7) !important;
+}
+
+.table-small tr {
+    background-color: rgb(189, 189, 189, 0.5) !important;
+}
+
+.table-small tr:hover {
+    background-color: rgb(45, 45, 45, 0.5) !important;
+}
+
+.jumbotron-product {
+    background-color: rgb(63, 114, 155, 0.7)
+}
+
+.modal-admin {
+    background-color: rgb(33, 33, 33, 0.8);
+    color: white;
+}
+
+#user-jumbo {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+    background-color: rgb(192, 192, 192, 0.4);
+}
+
+#product-container {
+    background-color: rgb(51, 181, 229, 0.5)
+}
+
+.jumbotron-admin {
+    background-color: rgb(55, 71, 79, 0.6);
+}
+
+.jumbotron-admin p {
+    color: whitesmoke;
+}
+
+#header h1 {
+    margin-bottom: 0;
+}
+
+#admin-nav,
+#user-nav {
+    border-bottom-right-radius: 25px;
+    background-color: rgb(0, 0, 0, 0.75) !important;
+}
+
+.jumbotron {
+    padding: 2rem 2rem;
+}
+
+#log-out {
+    visibility: hidden;
+}
+
+body {
+    background: url('/images/body_background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#navbar {
+    background-color: rgb(0, 0, 0, 0.75);
+    z-index: 10;
+}
+
+.table-dim {
+    background-color: rgb(245, 245, 245, 0.8);
+}
+
+.table-dim tr {
+    background-color: darkgray;
+}
+
+.table-dim th {
+    background-color: whitesmoke;
+}
+
+.table-dim tr:hover {
+    background-color: dimgray;
+}

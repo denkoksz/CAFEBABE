@@ -1,0 +1,61 @@
+{
+  "info": {
+    "_postman_id": "9319ef94-6934-4132-9d85-a0605b6b2bd6",
+    "name": "webshop",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "localhost:8080/products/valamiaminincs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "localhost:8080/products?url=medve",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "products"
+          ],
+          "query": [
+            {
+              "key": "url",
+              "value": "medve"
+            }
+          ]
+        },
+        "description": "elem ami nincs"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/products/mocha",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "localhost:8080/products?url=mocha",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "products"
+          ],
+          "query": [
+            {
+              "key": "url",
+              "value": "mocha"
+            }
+          ]
+        },
+        "description": "elem ami van"
+      },
+      "response": []
+    }
+  ]
+}
